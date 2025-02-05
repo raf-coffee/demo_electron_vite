@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { Link } from "react-router";
 
 type Partner = {
   organization_type: {
@@ -49,10 +48,7 @@ export default function CreatePartner(): JSX.Element {
   };
 
   return (
-    <div>
-      <Link to="/">
-        <button>Назад</button>
-      </Link>
+    <>
       <h1>Создать партнера</h1>
       <form onSubmit={handleSubmit} ref={formRef}>
         <label htmlFor="name">Наименование:</label>
@@ -76,6 +72,6 @@ export default function CreatePartner(): JSX.Element {
         <input id="email" type="email" required />
         <button type="submit">Создать партнера</button>
       </form>
-    </div>
+    </>
   );
 }

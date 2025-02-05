@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Link, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import type { Partner as PartnerType } from "../../../types";
 
 type LocationType = {
@@ -56,10 +56,7 @@ export default function UpdatePartner(): JSX.Element {
   };
 
   return (
-    <div>
-      <Link to="/">
-        <button>Назад</button>
-      </Link>
+    <>
       <h1>Обновить партнера</h1>
       <form onSubmit={handleSubmit} ref={formRef}>
         <label htmlFor="name">Наименование:</label>
@@ -96,6 +93,6 @@ export default function UpdatePartner(): JSX.Element {
         <input id="email" type="email" required defaultValue={location.state.email} />
         <button type="submit">Обновить партнера</button>
       </form>
-    </div>
+    </>
   );
 }

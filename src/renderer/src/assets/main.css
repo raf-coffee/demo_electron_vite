@@ -11,6 +11,20 @@ p {
   margin: 0;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form button {
+  margin-top: 15px;
+  padding: 8px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .header {
   display: flex;
   align-items: center;
